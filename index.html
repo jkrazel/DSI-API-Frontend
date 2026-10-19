@@ -13,7 +13,22 @@
         <h1>Rick and Morty Explorer</h1>
     </header>
     <main id="app">
-
+        <form id="search-form" class="search-panel">
+            <label for="resource-select">Qué quieres explorar</label>
+            <select id="resource-select">
+                <option value="character">Personajes</option>
+                <option value="location">Ubicaciones</option>
+                <option value="episode">Episodios</option>
+            </select>
+            <div id="filters" class="filters"></div>
+            <div class="form-actions">
+                <button type="submit">Buscar</button>
+                <button id="clear-button" type="button" class="secondary-button">Limpiar</button>
+            </div>
+        </form>
+        <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+        <section id="results" aria-live="polite"></section>
+        <nav id="pagination" class="pagination" aria-label="Paginación"></nav>
     </main>
     <script src="js/api.js"></script>
     <script src="js/ui.js"></script>
